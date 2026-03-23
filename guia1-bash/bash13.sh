@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# 13) Crear un script de Bash que solicite el ingreso de un número n y que luego calcule su factorial.
 
 echo "Ingrese un numero: "
 read n

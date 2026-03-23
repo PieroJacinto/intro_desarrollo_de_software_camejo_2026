@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# 14) Crear un script de Bash que solicite al usuario el ingreso de un número par. En caso de que sea impar, solicitarlo nuevamente.
+
 echo "Ingrese un numero par: "
 read n
 while [ $((n % 2)) -ne 0 ]; do

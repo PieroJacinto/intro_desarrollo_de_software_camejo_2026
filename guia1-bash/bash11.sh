@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# 11)  Crear un script de Bash que realice las 4 operaciones básicas (suma, resta, multiplicación y división) a dos números enteros ingresados por el usuario. 
+# Crear una función para cada una de las operaciones.
 sumar() {
     local resultado=$(($1+$2))
     echo $resultado

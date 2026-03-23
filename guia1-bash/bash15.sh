@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 15) Crear un script de Bash que solicite un número que representa un día de la semana, imprimir por pantalla de que día se trata. 
+# En caso de que el número esté fuera de rango, solicitarlo nuevamente.
+
 while true; do
     echo "Ingrese un numero entre 1 y 7: "
     read num

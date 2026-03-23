@@ -1,4 +1,6 @@
 #!/bin/bash
+# 7) Crear un script de Bash que solicite la edad del usuario y determine si es mayor o menor de edad.
+
 echo "ingrese su edad:"
 read edad
 
