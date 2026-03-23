@@ -4,13 +4,11 @@
 # Imprimir por pantalla los documentos ordenados.(la cantidad de números de DNI puede variar).
 
 # no enseñaron sort por eso lo hago de 2 maneras diferentes:
-# con sort, mucho mas sencillo. sort ordena -n por numero
-
-
-# creo un array con los parametros ingresados
+# con sort, mucho mas sencillo. sort ordena, -n dice q ordene por numero
+# primero creo un array con los parametros ingresados
 personas=("$@")
 
-# recorro con un for los parametros y se los paso por pipes a el sort por numero
+# despues recorro con un for los parametros y se los paso por pipes al sort por numero
 for dni in "${personas[@]}"; do
     echo "$dni"
 done | sort -n
