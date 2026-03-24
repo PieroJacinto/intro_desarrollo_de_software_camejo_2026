@@ -5,4 +5,5 @@
 
 #  14) Los nombres de usuario alfanuméricos.
 
-grep -E --color "^[A-Za-z0-9]+," contraseñas.csv
+grep -oE --color "^[A-Za-z0-9]+," contraseñas.csv  | sed "s/,//"
+

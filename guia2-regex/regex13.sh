@@ -5,4 +5,4 @@
 
 #  13) Las contraseñas alfanúmericas.
 
-grep -E --color ",[A-Za-z0-9]+$" contraseñas.csv
+grep -oE ",[A-Za-z0-9]+$" contraseñas.csv | sed 's/,//'

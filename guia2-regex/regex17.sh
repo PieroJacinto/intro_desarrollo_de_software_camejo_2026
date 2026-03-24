@@ -11,12 +11,12 @@
 
 ## SOLUCION 1: CON LOOKAHEADS que no enseñaron en la catedra: 
 ## Un lookahead (?=...) es una aserción que dice "a partir de acá, debe existir esto más adelante"
+## Un lookbehind (?<=...) es lo opuesto al lookahead,  en vez de mirar hacia adelante, mira hacia atrás.
 ## entonces seria: 
-grep -P --color ",(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&#]).*$" contraseñas.csv
-
+grep -oP "(?<=,)(?=[^,]*[a-z])(?=[^,]*[A-Z])(?=[^,]*[0-9])(?=[^,]*[@$!%*?&#])[^,]+$" contraseñas.csv
 ### SOPLUCION 2: con greps encadenados por pipes:
 ## en el primer grep evaluo cualquier caracter que no sea un espacio y que tenga al menos una minuscula
 ## en elñ segundo grep evalua que tenga alguna mayuscula
 ##en el tercer grep evalua que tenga al menos un numero
 ##en el cuarto grep evalua que tenga al menos unc aracter especial
-grep -E --color ",[^ ]*[a-z]" contraseñas.csv | grep -E "[A-Z]" | grep -E "[0-9]" | grep -E "[@\$!%\*\?&#]"
+grep -E ",[^ ]*[a-z]" contraseñas.csv | grep -E ",[^ ]*[A-Z]" | grep -E ",[^ ]*[0-9]" | grep -E ",[^ ]*[@\$!%\*\?&#]" | grep -oE ",[^,]+$" | sed 's/,//'

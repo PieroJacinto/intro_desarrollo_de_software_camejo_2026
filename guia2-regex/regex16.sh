@@ -5,4 +5,4 @@
 
 #  16) Las contraseñas con exactamente 14 caracteres (de cualquier tipo).
 
-grep -E --color ",.{14}$" contraseñas.csv
+grep -oE --color ",.{14}$" contraseñas.csv | sed "s/,//"

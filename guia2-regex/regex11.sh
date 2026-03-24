@@ -5,4 +5,4 @@
 
 #  11) Los nombres de usuario que contienen números.
 
-    grep -E --color "^[^,]*[0-9][^,]*," contraseñas.csv
+    grep -oE "^[^,]*[0-9][^,]*," contraseñas.csv  | sed "s/,//"

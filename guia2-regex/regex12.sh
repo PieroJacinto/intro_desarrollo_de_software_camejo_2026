@@ -5,4 +5,4 @@
 
 #  12) Los nombres de usuario con al menos un guión bajo (_).
 
-grep -E --color "^[^,]*_[^,]*," contraseñas.csv
+grep -oE "^[^,]*_[^,]*," contraseñas.csv  | sed "s/,//"
