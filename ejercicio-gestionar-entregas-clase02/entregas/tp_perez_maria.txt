@@ -1,0 +1,4 @@
+Alumno: Perez, Maria - Padron: 103890
+Este trabajo implementa un ordenamiento burbuja.
+Se comparan elementos adyacentes y se intercambian si estan desordenados.
+El algoritmo tiene complejidad O(n^2).

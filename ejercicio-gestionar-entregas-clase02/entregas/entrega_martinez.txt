@@ -1,0 +1,4 @@
+Alumno: Martinez, Lucas - Padron: 109234
+La solucion propuesta utiliza busqueda binaria.
+Divide el arreglo a la mitad en cada iteracion.
+Complejidad O(log n).

@@ -1,0 +1,3 @@
+hola profe aca le dejo mi tp
+Implemente una lista enlazada simple.
+Tiene operaciones de insertar, eliminar y buscar.

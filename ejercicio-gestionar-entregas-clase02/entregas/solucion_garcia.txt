@@ -1,0 +1,4 @@
+Alumno: Garcia, Juan - Padron: 104560
+La funcion recibe como parametro una lista de enteros.
+Retorna la suma de todos los elementos.
+Se utiliza un ciclo for para recorrer la lista.
