@@ -61,3 +61,5 @@ El material oficial de la materia está disponible en el sitio de la cátedra:
 
 - [regex101 — playground interactivo para probar expresiones regulares](https://regex101.com)
   *(Es el playground que usa la cátedra en clase para mostrar los ejemplos)*
+- [RegexLearn — tutorial interactivo para aprender regex desde cero](https://regexlearn.com/)
+- [Codecademy — Introduction to Regular Expressions](https://www.codecademy.com/courses/introduction-to-regular-expressions/lessons/nlp-regex-conceptual/exercises/introduction)
