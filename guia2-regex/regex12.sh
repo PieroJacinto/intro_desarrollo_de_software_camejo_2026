@@ -3,6 +3,6 @@
 #  Se tiene el archivo contraseñas.csv, el cual almacena las contraseñas de distintos usuarios en una plataforma. 
 #  La estructura es nombre_usuario,contraseña. Se pide extraer, del archivo:
 
-#  11) Los nombres de usuario que contienen números.
+#  12) Los nombres de usuario con al menos un guión bajo (_).
 
-    grep -E --color "^[^,]*[0-9][^,]*," contraseñas.csv
+grep -E --color "^[^,]*_[^,]*," contraseñas.csv
