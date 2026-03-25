@@ -28,7 +28,7 @@ $#          # cantidad de argumentos
 ```bash
 resultado=$(comando)        # guarda la salida de un comando en una variable
 fecha=$(date)
-archivos=$(ls | wc -l)
+archivos=$(ls | wc -l)      # cuenta la cantidad de archivos del directorio actual
 ```
 
 ---
@@ -210,27 +210,6 @@ arr+=("nuevo")
 # eliminar y reindexar
 unset arr[2]
 arr=("${arr[@]}")
-```
-
----
-
-## Bubble sort (estilo cátedra)
-
-```bash
-continuar=true
-i=1
-while $continuar && [ $i -lt $cantidad ]; do
-    continuar=false
-    for ((j=0; j<cantidad-i; j++)); do
-        if [ ${arr[$j]} -gt ${arr[$(( j+1 ))]} ]; then
-            temp=${arr[$j]}
-            arr[$j]=${arr[$(( j+1 ))]}
-            arr[$(( j+1 ))]=$temp
-            continuar=true
-        fi
-    done
-    (( i++ ))
-done
 ```
 
 ---
