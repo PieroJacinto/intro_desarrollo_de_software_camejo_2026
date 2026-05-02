@@ -115,10 +115,6 @@ HAVING AVG(ki) > 50000000;
 
 ## JOINs
 
-```
-Development → QA → Staging → Production
-```
-
 | Tipo | Devuelve |
 |------|----------|
 | **INNER JOIN** | Solo los registros que coinciden en ambas tablas |
