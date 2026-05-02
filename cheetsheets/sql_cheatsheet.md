@@ -222,25 +222,19 @@ docker exec -it <nombre_contenedor> psql -U postgres -d mi_base
 ## Patrones frecuentes en parcial
 
 ```sql
--- Contar elementos por grupo
-SELECT raza_id, COUNT(*) AS total
-FROM personajes GROUP BY raza_id ORDER BY total DESC;
 
--- El registro con valor máximo por grupo (subconsulta)
-SELECT b.nombre, a.nombre, a.lanzamiento
-FROM albumes a JOIN bandas b ON a.banda_id = b.id
-WHERE a.lanzamiento = (
-    SELECT MIN(a2.lanzamiento) FROM albumes a2 WHERE a2.banda_id = a.banda_id
-);
+-- Top N resultados
+SELECT nombre, ranking FROM albumes
+ORDER BY ranking ASC LIMIT 7;
 
 -- DISTINCT — evitar repetidos
 SELECT DISTINCT b.nombre FROM bandas b
 JOIN albumes a ON b.id = a.banda_id
 WHERE a.lanzamiento <= 1980;
 
--- Top N resultados
-SELECT nombre, ranking FROM albumes
-ORDER BY ranking ASC LIMIT 7;
+-- Contar elementos por grupo
+SELECT raza_id, COUNT(*) AS total
+FROM personajes GROUP BY raza_id ORDER BY total DESC;
 ```
 
 ---
